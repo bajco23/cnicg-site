@@ -264,9 +264,9 @@ footer {
     text-align: center;
 }
 
-.footer-logo-section img {
+.footer-logo {
     max-height: 80px;
-    filter: brightness(0) invert(1); /* Make logo white */
+    filter: brightness(0) invert(1); /* Podesava logo na bijelu boju */
 }
 
 .social-icons {
