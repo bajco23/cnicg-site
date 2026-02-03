@@ -213,12 +213,105 @@ button {
 
 /* Footer */
 footer {
-    border-top: 1px solid #eee;
-    padding: 40px 0;
-    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 50px;
     margin-top: 80px;
-    color: #777;
-    font-size: 0.85rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #a3b34c; /* Green color from screenshot */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-logo-section img {
+    max-height: 80px;
+    filter: brightness(0) invert(1); /* Make logo white */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.social-icon:hover {
+    background: #333;
+}
+
+.footer-contact p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #eee;
+}
+
+.footer-contact a {
+    color: #a3b34c;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 900px) {
