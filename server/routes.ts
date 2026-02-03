@@ -61,5 +61,9 @@ export async function registerRoutes(
     res.sendFile(path.join(clientPath, "nabavke.html"));
   });
 
+  app.get("/izvjestaj-detaljno.html", (req, res) => {
+    res.sendFile(path.join(clientPath, "izvjestaj-detaljno.html"));
+  });
+
   return httpServer;
 }
