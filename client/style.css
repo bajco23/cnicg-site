@@ -25,6 +25,7 @@ body {
     background: #fff;
     cursor: pointer;
     transition: border-color 0.2s;
+    width: 250px;
 }
 
 .search-container:hover {
