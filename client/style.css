@@ -42,11 +42,9 @@ header {
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 section {
@@ -54,9 +52,10 @@ section {
 }
 
 .news {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 
 .news h2 {
@@ -70,6 +69,11 @@ section {
   margin-bottom: 30px;
 }
 
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
 .news-item h3 {
   margin-bottom: 5px;
 }
@@ -78,6 +82,24 @@ section {
   font-size: 0.9em;
   color: #777;
   margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {
