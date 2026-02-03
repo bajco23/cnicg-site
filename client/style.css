@@ -266,7 +266,8 @@ footer {
 
 .footer-logo {
     max-height: 80px;
-    filter: brightness(0) invert(1); /* Podesava logo na bijelu boju */
+    filter: brightness(0) invert(1);
+    display: block;
 }
 
 .social-icons {
