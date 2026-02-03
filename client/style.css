@@ -93,10 +93,19 @@ main {
     padding: 0 20px;
 }
 
+.news-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+}
+
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    align-items: start;
 }
 
 /* News Items */
