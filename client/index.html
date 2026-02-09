@@ -41,7 +41,7 @@
     <main>
         <div class="news-slider">
             <div class="slider-track">
-                <div class="slide">
+                <div class="slide active">
                     <div class="slide-image">
                         <img src="/images/izvjestaj-naslovna.jpg" alt="Završni izvještaj">
                     </div>
@@ -151,15 +151,24 @@
     var currentSlide = 0;
     var totalSlides = 3;
     var autoPlayTimer;
-    var track = document.querySelector('.slider-track');
+    var slides = document.querySelectorAll('.slide');
+    var dots = document.querySelectorAll('.dot');
 
     function goToSlide(index) {
-        var dots = document.querySelectorAll('.dot');
-        dots[currentSlide].classList.remove('active');
+        var oldSlide = currentSlide;
         currentSlide = index;
         if (currentSlide >= totalSlides) currentSlide = 0;
         if (currentSlide < 0) currentSlide = totalSlides - 1;
-        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+
+        slides[oldSlide].classList.remove('active');
+        slides[oldSlide].classList.add('slide-out-left');
+        dots[oldSlide].classList.remove('active');
+
+        setTimeout(function() {
+            slides[oldSlide].classList.remove('slide-out-left');
+        }, 500);
+
+        slides[currentSlide].classList.add('active');
         dots[currentSlide].classList.add('active');
         resetAutoPlay();
     }
