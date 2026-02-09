@@ -106,28 +106,18 @@ nav ul li a:hover {
 }
 
 .slider-track {
-    position: relative;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
-    min-height: 420px;
 }
 
 .slide {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.slide.active {
+    min-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    opacity: 1;
-    position: relative;
+    flex-shrink: 0;
 }
 
 .slide-image img {
@@ -211,12 +201,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    .slide.active {
+    .slide {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-    .slider-track {
-        min-height: auto;
     }
     .slide-content h2 {
         font-size: 1.3rem;
