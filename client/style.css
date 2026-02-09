@@ -53,8 +53,20 @@ body {
 
 .lang-switch {
     margin-left: auto;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.85rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lang-switch span {
+    cursor: pointer;
+    transition: font-weight 0.2s;
+}
+
+.lang-switch span:hover {
+    text-decoration: underline;
 }
 
 /* Navigation */

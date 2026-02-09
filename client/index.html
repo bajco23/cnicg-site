@@ -18,18 +18,22 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
@@ -38,57 +42,57 @@
         <div class="hero-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
             <section class="news-item">
                 <img src="/images/izvjestaj-naslovna.jpg" alt="Završni izvještaj">
-                <span class="category">JAVNE NABAVKE, JPP, STRATEGIJA</span>
-                <h3>Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h3>
-                <p class="excerpt">Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i JPP (2021–2025), koji uključuje evaluaciju učinaka sprovedenih mjera.</p>
-                <a href="izvjestaj-detaljno.html" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat1">JAVNE NABAVKE, JPP, STRATEGIJA</span>
+                <h3 data-lang-key="index.title1">Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h3>
+                <p class="excerpt" data-lang-key="index.excerpt1">Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i JPP (2021–2025), koji uključuje evaluaciju učinaka sprovedenih mjera.</p>
+                <a href="izvjestaj-detaljno.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
 
             <section class="news-item">
                 <img src="/images/news5.jpg" alt="Javna rasprava koncesije">
-                <span class="category">KONCESIJE, JAVNA RASPRAVA</span>
-                <h3>Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h3>
-                <p class="excerpt">Smatramo da postoje opravdani razlozi za produženje javne rasprave kako bi se obezbijedilo stvarno učešće javnosti i lokalnih samouprava.</p>
-                <a href="vijest-koncesije-rasprava.html" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat2">KONCESIJE, JAVNA RASPRAVA</span>
+                <h3 data-lang-key="index.title2">Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h3>
+                <p class="excerpt" data-lang-key="index.excerpt2">Smatramo da postoje opravdani razlozi za produženje javne rasprave kako bi se obezbijedilo stvarno učešće javnosti i lokalnih samouprava.</p>
+                <a href="vijest-koncesije-rasprava.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
 
             <section class="news-item">
                 <img src="/images/news3.jpg" alt="Vijest 3">
-                <span class="category">EVROPSKI POSLOVI</span>
-                <h3>Saradnja sa Ministarstvom evropskih poslova na Reformskoj agendi</h3>
-                <p class="excerpt">Potpisali smo memorandum o saradnji sa Ministarstvom evropskih poslova, kojim se uspostavlja okvir za zajedničko djelovanje...</p>
-                <a href="#" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat3">EVROPSKI POSLOVI</span>
+                <h3 data-lang-key="index.title3">Saradnja sa Ministarstvom evropskih poslova na Reformskoj agendi</h3>
+                <p class="excerpt" data-lang-key="index.excerpt3">Potpisali smo memorandum o saradnji sa Ministarstvom evropskih poslova, kojim se uspostavlja okvir za zajedničko djelovanje...</p>
+                <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
 
             <section class="news-item">
                 <img src="/images/news4.jpg" alt="Vijest 4">
-                <span class="category">JAVNE NABAVKE</span>
-                <h3>Analiza transparentnosti procesa javnih nabavki u 2025. godini</h3>
-                <p class="excerpt">Naš najnoviji izvještaj pokazuje značajne izazove u primjeni zakona o javnim nabavkama na lokalnom nivou...</p>
-                <a href="#" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat4">JAVNE NABAVKE</span>
+                <h3 data-lang-key="index.title4">Analiza transparentnosti procesa javnih nabavki u 2025. godini</h3>
+                <p class="excerpt" data-lang-key="index.excerpt4">Naš najnoviji izvještaj pokazuje značajne izazove u primjeni zakona o javnim nabavkama na lokalnom nivou...</p>
+                <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
 
             <section class="news-item">
                 <img src="/images/news5.jpg" alt="Vijest 5">
-                <span class="category">KONCESIJE</span>
-                <h3>Novi izvještaj o upravljanju koncesionim ugovorima u sektoru voda</h3>
-                <p class="excerpt">Istraživanje CNI ukazuje na potrebu za strožim nadzorom nad eksploatacijom prirodnih bogatstava...</p>
-                <a href="#" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat5">KONCESIJE</span>
+                <h3 data-lang-key="index.title5">Novi izvještaj o upravljanju koncesionim ugovorima u sektoru voda</h3>
+                <p class="excerpt" data-lang-key="index.excerpt5">Istraživanje CNI ukazuje na potrebu za strožim nadzorom nad eksploatacijom prirodnih bogatstava...</p>
+                <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
 
             <section class="news-item">
                 <img src="/images/news6.jpg" alt="Vijest 6">
-                <span class="category">MLADI I INOVACIJE</span>
-                <h3>Završen mentorski program "Nove inicijative za novu generaciju"</h3>
-                <p class="excerpt">Preko 30 mladih lidera iz cijele Crne Gore uspješno je prošlo kroz naš intenzivni program obuke...</p>
-                <a href="#" class="read-more">Pročitajte više</a>
+                <span class="category" data-lang-key="index.cat6">MLADI I INOVACIJE</span>
+                <h3 data-lang-key="index.title6">Završen mentorski program "Nove inicijative za novu generaciju"</h3>
+                <p class="excerpt" data-lang-key="index.excerpt6">Preko 30 mladih lidera iz cijele Crne Gore uspješno je prošlo kroz naš intenzivni program obuke...</p>
+                <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
             </section>
         </div>
 
         <div class="mission-section" style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
             <section class="card">
-                <h2>Naša Misija</h2>
-                <p>Centar za nove inicijative je posvećen razvoju društva kroz inovativne projekte i podršku novim idejama koje unapređuju zajednicu u Crnoj Gori.</p>
+                <h2 data-lang-key="index.missionTitle">Naša Misija</h2>
+                <p data-lang-key="index.missionText">Centar za nove inicijative je posvećen razvoju društva kroz inovativne projekte i podršku novim idejama koje unapređuju zajednicu u Crnoj Gori.</p>
             </section>
         </div>
     </main>
@@ -96,12 +100,12 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -114,12 +118,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>

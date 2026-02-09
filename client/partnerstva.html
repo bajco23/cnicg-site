@@ -18,38 +18,42 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
         <section class="card">
-            <h2>Privatno-javna partnerstva</h2>
-            <p>Ovdje možete pronaći informacije o modelima saradnje javnog i privatnog sektora.</p>
+            <h2 data-lang-key="partnerstva.title">Privatno-javna partnerstva</h2>
+            <p data-lang-key="partnerstva.text">Ovdje možete pronaći informacije o modelima saradnje javnog i privatnog sektora.</p>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -62,12 +66,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>

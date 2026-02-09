@@ -18,56 +18,60 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
         <section class="card">
-            <h2>Ko smo mi?</h2>
-            <p>Centar za nove inicijative (CNI) je nevladina organizacija osnovana sa ciljem da bude pokretač pozitivnih promjena u crnogorskom društvu. Naš tim čine iskusni profesionalci, istraživači i aktivisti koji vjeruju da se kroz transparentnost, inovacije i stručni pristup može izgraditi bolja budućnost za sve građane.</p>
+            <h2 data-lang-key="about.whoTitle">Ko smo mi?</h2>
+            <p data-lang-key="about.whoText">Centar za nove inicijative (CNI) je nevladina organizacija osnovana sa ciljem da bude pokretač pozitivnih promjena u crnogorskom društvu. Naš tim čine iskusni profesionalci, istraživači i aktivisti koji vjeruju da se kroz transparentnost, inovacije i stručni pristup može izgraditi bolja budućnost za sve građane.</p>
             
-            <h3 style="margin-top: 30px;">Naša misija</h3>
-            <p>Misija Centra je unapređenje javnih politika kroz temeljno istraživanje, monitoring i zagovaranje reformi u ključnim oblastima kao što su koncesije, javne nabavke i javno-privatna partnerstva. Težimo društvu u kojem su procesi donošenja odluka transparentni, a resursi se koriste na najefikasniji način u interesu javnosti.</p>
+            <h3 style="margin-top: 30px;" data-lang-key="about.missionTitle">Naša misija</h3>
+            <p data-lang-key="about.missionText">Misija Centra je unapređenje javnih politika kroz temeljno istraživanje, monitoring i zagovaranje reformi u ključnim oblastima kao što su koncesije, javne nabavke i javno-privatna partnerstva. Težimo društvu u kojem su procesi donošenja odluka transparentni, a resursi se koriste na najefikasniji način u interesu javnosti.</p>
         </section>
 
         <section class="card" style="margin-top: 20px;">
-            <h2>Šta radimo?</h2>
-            <p>Fokusirani smo na tri glavna stuba našeg djelovanja:</p>
+            <h2 data-lang-key="about.whatTitle">Šta radimo?</h2>
+            <p data-lang-key="about.whatText">Fokusirani smo na tri glavna stuba našeg djelovanja:</p>
             <ul style="margin-left: 20px; margin-top: 10px;">
-                <li><strong>Koncesije:</strong> Pratimo proces dodjele i upravljanja koncesionim ugovorima kako bismo osigurali zaštitu javnog interesa i prirodnih resursa.</li>
-                <li><strong>Privatno-javna partnerstva:</strong> Analiziramo modele saradnje između javnog i privatnog sektora, promovišući najbolje međunarodne prakse i odgovornost.</li>
-                <li><strong>Javne nabavke:</strong> Nadgledamo transparentnost i zakonitost trošenja budžetskih sredstava kroz procese nabavki roba, radova i usluga.</li>
+                <li data-lang-key="about.pillar1"><strong>Koncesije:</strong> Pratimo proces dodjele i upravljanja koncesionim ugovorima kako bismo osigurali zaštitu javnog interesa i prirodnih resursa.</li>
+                <li data-lang-key="about.pillar2"><strong>Privatno-javna partnerstva:</strong> Analiziramo modele saradnje između javnog i privatnog sektora, promovišući najbolje međunarodne prakse i odgovornost.</li>
+                <li data-lang-key="about.pillar3"><strong>Javne nabavke:</strong> Nadgledamo transparentnost i zakonitost trošenja budžetskih sredstava kroz procese nabavki roba, radova i usluga.</li>
             </ul>
         </section>
 
         <section class="card" style="margin-top: 20px;">
-            <h2>Naše vrijednosti</h2>
-            <p>U radu se vodimo principima integriteta, objektivnosti i profesionalizma. Vjerujemo u snagu argumenata zasnovanih na dokazima i otvoreni smo za saradnju sa svim akterima koji dijele našu viziju moderne i razvijene Crne Gore.</p>
+            <h2 data-lang-key="about.valuesTitle">Naše vrijednosti</h2>
+            <p data-lang-key="about.valuesText">U radu se vodimo principima integriteta, objektivnosti i profesionalizma. Vjerujemo u snagu argumenata zasnovanih na dokazima i otvoreni smo za saradnju sa svim akterima koji dijele našu viziju moderne i razvijene Crne Gore.</p>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -80,12 +84,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>

@@ -18,49 +18,53 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
         <div class="form-section">
-            <h2 style="text-align: center; margin-bottom: 40px;">Kontakt podaci</h2>
+            <h2 style="text-align: center; margin-bottom: 40px;" data-lang-key="contact.title">Kontakt podaci</h2>
             
             <div class="contact-info" style="background: #fdfdfd; padding: 40px; border: 1px solid #eee; margin-bottom: 40px;">
-                <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>📧 Email adresa:</strong> <a href="mailto:nvo.cni.mne@gmail.com" style="color: #0047ab; text-decoration: none;">nvo.cni.mne@gmail.com</a></p>
-                <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>📞 Broj telefona:</strong> <a href="tel:+38267533252" style="color: #0047ab; text-decoration: none;">+382 67 533 252</a></p>
-                <p style="font-size: 1.1rem;"><strong>📍 Adresa:</strong> Petra Zvicera 7, Podgorica 81000</p>
+                <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong data-lang-key="contact.email">Email adresa:</strong> <a href="mailto:nvo.cni.mne@gmail.com" style="color: #0047ab; text-decoration: none;">nvo.cni.mne@gmail.com</a></p>
+                <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong data-lang-key="contact.phone">Broj telefona:</strong> <a href="tel:+38267533252" style="color: #0047ab; text-decoration: none;">+382 67 533 252</a></p>
+                <p style="font-size: 1.1rem;"><strong data-lang-key="contact.address">Adresa:</strong> Petra Zvicera 7, Podgorica 81000</p>
             </div>
             
-            <p style="text-align: center; color: #555; margin-bottom: 30px;">Ukoliko imate pitanja ili želite da sarađujete sa nama, pošaljite nam poruku putem forme ispod.</p>
+            <p style="text-align: center; color: #555; margin-bottom: 30px;" data-lang-key="contact.formIntro">Ukoliko imate pitanja ili želite da sarađujete sa nama, pošaljite nam poruku putem forme ispod.</p>
             
             <form action="#" method="post">
                 <div class="form-group">
-                    <label for="name">Ime i prezime:</label>
+                    <label for="name" data-lang-key="contact.nameLabel">Ime i prezime:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email adresa:</label>
+                    <label for="email" data-lang-key="contact.emailLabel">Email adresa:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Poruka:</label>
+                    <label for="message" data-lang-key="contact.messageLabel">Poruka:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 <div style="text-align: center;">
-                    <button type="submit">Pošalji poruku</button>
+                    <button type="submit" data-lang-key="contact.sendButton">Pošalji poruku</button>
                 </div>
             </form>
         </div>
@@ -69,12 +73,12 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -87,12 +91,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>

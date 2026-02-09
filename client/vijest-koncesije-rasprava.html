@@ -18,18 +18,22 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
@@ -37,9 +41,9 @@
     <main class="container">
         <article class="detailed-news">
             <header class="news-header">
-                <span class="category">KONCESIJE, JAVNA RASPRAVA, TRANSPARENTNOST</span>
-                <h1>Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h1>
-                <div class="news-meta">Objavljeno: 03. Februar 2026.</div>
+                <span class="category" data-lang-key="rasprava.cat">KONCESIJE, JAVNA RASPRAVA, TRANSPARENTNOST</span>
+                <h1 data-lang-key="rasprava.title">Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h1>
+                <div class="news-meta" data-lang-key="rasprava.date">Objavljeno: 03. Februar 2026.</div>
             </header>
 
             <div class="news-main-image">
@@ -47,41 +51,41 @@
             </div>
 
             <div class="news-text-content">
-                <p>Obraćamo se povodom Javne rasprave o Godišnjem planu davanja koncesija za detaljna geološka istraživanja i eksploataciju mineralnih sirovina za 2026. godinu, koja je otvorena u periodu od 30.12.2025. do 19.01.2026. godine.</p>
+                <p data-lang-key="rasprava.p1">Obraćamo se povodom Javne rasprave o Godišnjem planu davanja koncesija za detaljna geološka istraživanja i eksploataciju mineralnih sirovina za 2026. godinu, koja je otvorena u periodu od 30.12.2025. do 19.01.2026. godine.</p>
                 
-                <p>Na osnovu analize trajanja i strukture ovog perioda, smatramo da postoje opravdani razlozi za produženje javne rasprave, kako bi se obezbijedilo stvarno i suštinsko učešće zainteresovane javnosti, naročito lokalnih samouprava i građana.</p>
+                <p data-lang-key="rasprava.p2">Na osnovu analize trajanja i strukture ovog perioda, smatramo da postoje opravdani razlozi za produženje javne rasprave, kako bi se obezbijedilo stvarno i suštinsko učešće zainteresovane javnosti, naročito lokalnih samouprava i građana.</p>
 
-                <h2>Trajanje javne rasprave</h2>
+                <h2 data-lang-key="rasprava.durationTitle">Trajanje javne rasprave</h2>
                 <ul>
-                    <li>Ukupno trajanje: 21 dan</li>
-                    <li>Period obuhvata novogodišnje i vjerske praznike</li>
-                    <li>Značajan dio roka pada u vrijeme kolektivnih godišnjih odmora i smanjene institucionalne aktivnosti</li>
+                    <li data-lang-key="rasprava.dur1">Ukupno trajanje: 21 dan</li>
+                    <li data-lang-key="rasprava.dur2">Period obuhvata novogodišnje i vjerske praznike</li>
+                    <li data-lang-key="rasprava.dur3">Značajan dio roka pada u vrijeme kolektivnih godišnjih odmora i smanjene institucionalne aktivnosti</li>
                 </ul>
 
-                <p>U navedenom periodu evidentno je da je broj efektivnih radnih dana znatno manji od kalendarskog roka, što u praksi znači da zainteresovani subjekti nijesu imali realnu mogućnost da se u potpunosti upoznaju sa obimnom dokumentacijom, izvrše analize i pripreme kvalitetne komentare i predloge.</p>
+                <p data-lang-key="rasprava.p3">U navedenom periodu evidentno je da je broj efektivnih radnih dana znatno manji od kalendarskog roka, što u praksi znači da zainteresovani subjekti nijesu imali realnu mogućnost da se u potpunosti upoznaju sa obimnom dokumentacijom, izvrše analize i pripreme kvalitetne komentare i predloge.</p>
 
-                <p>Iako je formalni rok javne rasprave u skladu sa minimalnim zakonskim okvirima, želimo da ukažemo da suština javne rasprave nije samo ispunjenje forme, već obezbjeđivanje stvarnog učešća javnosti, naročito kada se radi o dokumentu koji ima direktan i dugoročan uticaj na prostor, prirodne resurse, lokalne budžete i razvojne politike lokalnih samouprava.</p>
+                <p data-lang-key="rasprava.p4">Iako je formalni rok javne rasprave u skladu sa minimalnim zakonskim okvirima, želimo da ukažemo da suština javne rasprave nije samo ispunjenje forme, već obezbjeđivanje stvarnog učešća javnosti, naročito kada se radi o dokumentu koji ima direktan i dugoročan uticaj na prostor, prirodne resurse, lokalne budžete i razvojne politike lokalnih samouprava.</p>
 
-                <h2>Razlozi za produženje javne rasprave</h2>
+                <h2 data-lang-key="rasprava.reasonsTitle">Razlozi za produženje javne rasprave</h2>
                 <ul>
-                    <li>Godišnji plan davanja koncesija direktno utiče na nadležnosti i interese lokalnih samouprava, koje nijesu imale dovoljno vremena da zauzmu institucionalne stavove</li>
-                    <li>Dokument se odnosi na eksploataciju mineralnih sirovina, oblast od visokog javnog interesa, sa potencijalnim ekološkim, ekonomskim i socijalnim posljedicama</li>
-                    <li>Javna rasprava je sprovedena u periodu praznika, bez dodatnih mehanizama informisanja javnosti</li>
-                    <li>Neophodno je omogućiti širu informisanost građana putem javnih sredstava informisanja, kako bi se obezbijedila transparentnost i povjerenje u proces donošenja odluka</li>
+                    <li data-lang-key="rasprava.reason1">Godišnji plan davanja koncesija direktno utiče na nadležnosti i interese lokalnih samouprava, koje nijesu imale dovoljno vremena da zauzmu institucionalne stavove</li>
+                    <li data-lang-key="rasprava.reason2">Dokument se odnosi na eksploataciju mineralnih sirovina, oblast od visokog javnog interesa, sa potencijalnim ekološkim, ekonomskim i socijalnim posljedicama</li>
+                    <li data-lang-key="rasprava.reason3">Javna rasprava je sprovedena u periodu praznika, bez dodatnih mehanizama informisanja javnosti</li>
+                    <li data-lang-key="rasprava.reason4">Neophodno je omogućiti širu informisanost građana putem javnih sredstava informisanja, kako bi se obezbijedila transparentnost i povjerenje u proces donošenja odluka</li>
                 </ul>
 
-                <h2>Naši predlozi</h2>
-                <p>Imajući u vidu navedeno, predlažemo:</p>
+                <h2 data-lang-key="rasprava.proposalsTitle">Naši predlozi</h2>
+                <p data-lang-key="rasprava.proposalsIntro">Imajući u vidu navedeno, predlažemo:</p>
                 <ul>
-                    <li>Produženje roka javne rasprave za dodatnih najmanje 15–30 dana</li>
-                    <li>Aktivno informisanje javnosti putem medija (saopštenja, intervjui, objave) o značaju dokumenta i mogućnosti učešća</li>
-                    <li>Dodatno uključivanje lokalnih samouprava i zainteresovanih zajednica u proces konsultacija</li>
+                    <li data-lang-key="rasprava.proposal1">Produženje roka javne rasprave za dodatnih najmanje 15–30 dana</li>
+                    <li data-lang-key="rasprava.proposal2">Aktivno informisanje javnosti putem medija (saopštenja, intervjui, objave) o značaju dokumenta i mogućnosti učešća</li>
+                    <li data-lang-key="rasprava.proposal3">Dodatno uključivanje lokalnih samouprava i zainteresovanih zajednica u proces konsultacija</li>
                 </ul>
 
-                <p>Smatramo da bi ovakav pristup bio u skladu sa principima dobre uprave, transparentnosti i participativnog odlučivanja, te bi doprinio kvalitetnijem i legitimnijem procesu donošenja odluka.</p>
+                <p data-lang-key="rasprava.conclusion">Smatramo da bi ovakav pristup bio u skladu sa principima dobre uprave, transparentnosti i participativnog odlučivanja, te bi doprinio kvalitetnijem i legitimnijem procesu donošenja odluka.</p>
 
                 <div class="contact-info" style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #a3b34c;">
-                    <p><strong>Kontakt:</strong></p>
+                    <p><strong data-lang-key="rasprava.contactLabel">Kontakt:</strong></p>
                     <p>Veselin Bajčeta<br>
                     NVO Centar za nove inicijative<br>
                     Tel: +382 67 533 252</p>
@@ -93,12 +97,12 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -111,12 +115,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>

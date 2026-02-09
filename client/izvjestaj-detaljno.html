@@ -18,18 +18,22 @@
         <div class="search-container">
             <span class="search-text">Search</span>
         </div>
-        <div class="lang-switch">MNE <span>|</span> ENG</div>
+        <div class="lang-switch">
+            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
+            <span>|</span>
+            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+        </div>
     </div>
 
     <div class="header-container">
         <nav>
             <ul>
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="koncesije.html">Koncesije</a></li>
-                <li><a href="partnerstva.html">Privatno-javna partnerstva</a></li>
-                <li><a href="nabavke.html">Javne nabavke</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" data-lang-key="nav.home">Početna</a></li>
+                <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                <li><a href="partnerstva.html" data-lang-key="nav.partnerships">Privatno-javna partnerstva</a></li>
+                <li><a href="nabavke.html" data-lang-key="nav.procurement">Javne nabavke</a></li>
+                <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                <li><a href="contact.html" data-lang-key="nav.contact">Kontakt</a></li>
             </ul>
         </nav>
     </div>
@@ -37,9 +41,9 @@
     <main class="container">
         <article class="detailed-news">
             <header class="news-header">
-                <span class="category">JAVNE NABAVKE, JPP, STRATEGIJA</span>
-                <h1>Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h1>
-                <div class="news-meta">Objavljeno: 03. Februar 2026.</div>
+                <span class="category" data-lang-key="izvjestaj.cat">JAVNE NABAVKE, JPP, STRATEGIJA</span>
+                <h1 data-lang-key="izvjestaj.title">Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h1>
+                <div class="news-meta" data-lang-key="izvjestaj.date">Objavljeno: 03. Februar 2026.</div>
             </header>
 
             <div class="news-main-image">
@@ -47,17 +51,17 @@
             </div>
 
             <div class="news-text-content">
-                <p>Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i javno-privatnog partnerstva u Crnoj Gori za period 2021–2025, koji uključuje i evaluaciju učinaka sprovedenih mjera. Dokument daje sveobuhvatan pregled stepena realizacije strateških ciljeva, ostvarenih rezultata, kao i izazova koji su pratili primjenu Strategije.</p>
+                <p data-lang-key="izvjestaj.p1">Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i javno-privatnog partnerstva u Crnoj Gori za period 2021–2025, koji uključuje i evaluaciju učinaka sprovedenih mjera. Dokument daje sveobuhvatan pregled stepena realizacije strateških ciljeva, ostvarenih rezultata, kao i izazova koji su pratili primjenu Strategije.</p>
                 
-                <p>Izvještaj ukazuje na unapređenje normativnog i institucionalnog okvira u oblasti javnih nabavki, jačanje transparentnosti postupaka i kapaciteta nadležnih institucija, kao i napredak u usklađivanju sa evropskim standardima. Poseban akcenat stavljen je na digitalizaciju procesa javnih nabavki, unapređenje sistema praćenja i kontrole, te razvoj modela javno-privatnog partnerstva kao alternativnog mehanizma za realizaciju infrastrukturnih i razvojnih projekata.</p>
+                <p data-lang-key="izvjestaj.p2">Izvještaj ukazuje na unapređenje normativnog i institucionalnog okvira u oblasti javnih nabavki, jačanje transparentnosti postupaka i kapaciteta nadležnih institucija, kao i napredak u usklađivanju sa evropskim standardima. Poseban akcenat stavljen je na digitalizaciju procesa javnih nabavki, unapređenje sistema praćenja i kontrole, te razvoj modela javno-privatnog partnerstva kao alternativnog mehanizma za realizaciju infrastrukturnih i razvojnih projekata.</p>
 
-                <p>Evaluacija učinaka Strategije identifikuje i određene izazove, uključujući potrebu za dodatnim jačanjem administrativnih kapaciteta, dosljednijom primjenom propisa u praksi i unapređenjem planiranja javnih nabavki. Izvještaj sadrži i preporuke koje mogu poslužiti kao osnova za definisanje budućih politika i strateških pravaca u ovoj oblasti.</p>
+                <p data-lang-key="izvjestaj.p3">Evaluacija učinaka Strategije identifikuje i određene izazove, uključujući potrebu za dodatnim jačanjem administrativnih kapaciteta, dosljednijom primjenom propisa u praksi i unapređenjem planiranja javnih nabavki. Izvještaj sadrži i preporuke koje mogu poslužiti kao osnova za definisanje budućih politika i strateških pravaca u ovoj oblasti.</p>
 
                 <div class="download-section" style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #a3b34c;">
-                    <h4>Dokumentacija:</h4>
-                    <p>Kompletan tekst izvještaja možete preuzeti u PDF formatu klikom na link ispod:</p>
+                    <h4 data-lang-key="izvjestaj.docTitle">Dokumentacija:</h4>
+                    <p data-lang-key="izvjestaj.docText">Kompletan tekst izvještaja možete preuzeti u PDF formatu klikom na link ispod:</p>
                     <a href="/docs/izvjestaj.pdf" class="btn-download" download style="display: inline-block; background: #222222; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 10px;">
-                        <i class="fas fa-file-pdf"></i> Preuzmi Završni Izvještaj (PDF)
+                        <i class="fas fa-file-pdf"></i> <span data-lang-key="izvjestaj.docButton">Preuzmi Završni Izvještaj (PDF)</span>
                     </a>
                 </div>
             </div>
@@ -67,12 +71,12 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Linkovi</h3>
+                <h3 data-lang-key="footer.links">Linkovi</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="koncesije.html">Koncesije</a></li>
-                    <li><a href="partnerstva.html">Partnerstva</a></li>
-                    <li><a href="nabavke.html">Nabavke</a></li>
+                    <li><a href="about.html" data-lang-key="nav.about">O nama</a></li>
+                    <li><a href="koncesije.html" data-lang-key="nav.concessions">Koncesije</a></li>
+                    <li><a href="partnerstva.html" data-lang-key="footer.partnerships">Partnerstva</a></li>
+                    <li><a href="nabavke.html" data-lang-key="footer.procurement">Nabavke</a></li>
                 </ul>
             </div>
             
@@ -85,12 +89,13 @@
             </div>
 
             <div class="footer-section footer-contact">
-                <h3>Kontakt</h3>
+                <h3 data-lang-key="footer.contact">Kontakt</h3>
                 <p><a href="mailto:nvo.cni.mne@gmail.com">nvo.cni.mne@gmail.com</a></p>
                 <p><a href="tel:+38267533252">+382 67 533 252</a></p>
                 <p>Petra Zvicera 7, Podgorica 81000</p>
             </div>
         </div>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>
