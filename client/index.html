@@ -39,31 +39,52 @@
     </div>
 
     <main>
-        <div class="hero-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
-            <section class="news-item">
-                <img src="/images/izvjestaj-naslovna.jpg" alt="Završni izvještaj">
-                <span class="category" data-lang-key="index.cat1">JAVNE NABAVKE, JPP, STRATEGIJA</span>
-                <h3 data-lang-key="index.title1">Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h3>
-                <p class="excerpt" data-lang-key="index.excerpt1">Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i JPP (2021–2025), koji uključuje evaluaciju učinaka sprovedenih mjera.</p>
-                <a href="izvjestaj-detaljno.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
-            </section>
+        <div class="news-slider">
+            <div class="slider-track">
+                <div class="slide active">
+                    <div class="slide-image">
+                        <img src="/images/izvjestaj-naslovna.jpg" alt="Završni izvještaj">
+                    </div>
+                    <div class="slide-content">
+                        <span class="category" data-lang-key="index.cat1">JAVNE NABAVKE, JPP, STRATEGIJA</span>
+                        <h2 data-lang-key="index.title1">Objavljen Završni izvještaj o realizaciji Strategije javnih nabavki i JPP 2021–2025</h2>
+                        <p data-lang-key="index.excerpt1">Objavljen je Završni izvještaj o realizaciji Strategije za unapređenje politike javnih nabavki i JPP (2021–2025), koji uključuje evaluaciju učinaka sprovedenih mjera.</p>
+                        <a href="izvjestaj-detaljno.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="/images/news5.jpg" alt="Javna rasprava koncesije">
+                    </div>
+                    <div class="slide-content">
+                        <span class="category" data-lang-key="index.cat2">KONCESIJE, JAVNA RASPRAVA</span>
+                        <h2 data-lang-key="index.title2">Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h2>
+                        <p data-lang-key="index.excerpt2">Smatramo da postoje opravdani razlozi za produženje javne rasprave kako bi se obezbijedilo stvarno učešće javnosti i lokalnih samouprava.</p>
+                        <a href="vijest-koncesije-rasprava.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="/images/news3.jpg" alt="Vijest 3">
+                    </div>
+                    <div class="slide-content">
+                        <span class="category" data-lang-key="index.cat3">EVROPSKI POSLOVI</span>
+                        <h2 data-lang-key="index.title3">Saradnja sa Ministarstvom evropskih poslova na Reformskoj agendi</h2>
+                        <p data-lang-key="index.excerpt3">Potpisali smo memorandum o saradnji sa Ministarstvom evropskih poslova, kojim se uspostavlja okvir za zajedničko djelovanje...</p>
+                        <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+            <button class="slider-arrow slider-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-arrow slider-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
 
-            <section class="news-item">
-                <img src="/images/news5.jpg" alt="Javna rasprava koncesije">
-                <span class="category" data-lang-key="index.cat2">KONCESIJE, JAVNA RASPRAVA</span>
-                <h3 data-lang-key="index.title2">Zahtjev za produženje javne rasprave o Godišnjem planu davanja koncesija za 2026. godinu</h3>
-                <p class="excerpt" data-lang-key="index.excerpt2">Smatramo da postoje opravdani razlozi za produženje javne rasprave kako bi se obezbijedilo stvarno učešće javnosti i lokalnih samouprava.</p>
-                <a href="vijest-koncesije-rasprava.html" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
-            </section>
-
-            <section class="news-item">
-                <img src="/images/news3.jpg" alt="Vijest 3">
-                <span class="category" data-lang-key="index.cat3">EVROPSKI POSLOVI</span>
-                <h3 data-lang-key="index.title3">Saradnja sa Ministarstvom evropskih poslova na Reformskoj agendi</h3>
-                <p class="excerpt" data-lang-key="index.excerpt3">Potpisali smo memorandum o saradnji sa Ministarstvom evropskih poslova, kojim se uspostavlja okvir za zajedničko djelovanje...</p>
-                <a href="#" class="read-more" data-lang-key="index.readmore">Pročitajte više</a>
-            </section>
-
+        <div class="hero-grid" style="margin-top: 50px;">
             <section class="news-item">
                 <img src="/images/news4.jpg" alt="Vijest 4">
                 <span class="category" data-lang-key="index.cat4">JAVNE NABAVKE</span>
@@ -126,5 +147,36 @@
         </div>
     </footer>
     <script src="lang.js"></script>
+    <script>
+    var currentSlide = 0;
+    var totalSlides = 3;
+    var autoPlayTimer;
+
+    function goToSlide(index) {
+        var slides = document.querySelectorAll('.slide');
+        var dots = document.querySelectorAll('.dot');
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+        resetAutoPlay();
+    }
+
+    function changeSlide(direction) {
+        goToSlide(currentSlide + direction);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(function() {
+            goToSlide(currentSlide + 1);
+        }, 5000);
+    }
+
+    resetAutoPlay();
+    </script>
 </body>
 </html>
