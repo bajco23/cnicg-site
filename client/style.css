@@ -11,7 +11,7 @@ body {
 .utility-bar {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 50px;
     background: #fff;
     gap: 30px;
@@ -27,6 +27,7 @@ body {
     cursor: pointer;
     transition: border-color 0.2s;
     width: 250px;
+    margin-top: 38px;
 }
 
 .search-container:hover {
@@ -62,6 +63,7 @@ body {
 
 .lang-switch {
     margin-left: auto;
+    margin-top: 10px;
     font-size: 0.85rem;
     color: #333;
     display: flex;
