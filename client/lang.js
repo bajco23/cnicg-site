@@ -12,7 +12,8 @@ var translations = {
     jpp_faq: { mne: "FAQ/Objašnjenja", eng: "FAQ/Explanations" },
     procurement: { mne: "Javne nabavke", eng: "Public Procurement" },
     about: { mne: "O nama", eng: "About Us" },
-    contact: { mne: "Kontakt", eng: "Contact" }
+    contact: { mne: "Kontakt", eng: "Contact" },
+    finansijski: { mne: "Finansijski iskaz", eng: "Financial Statement" }
   },
   footer: {
     links: { mne: "Linkovi", eng: "Links" },
