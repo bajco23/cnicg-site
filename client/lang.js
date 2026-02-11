@@ -4,7 +4,7 @@ var translations = {
     concessions: { mne: "Koncesije", eng: "Concessions" },
     regulativa: { mne: "Regulativa", eng: "Regulations" },
     registar: { mne: "Registar koncesija", eng: "Concession Registry" },
-    partnerships: { mne: "Privatno-javna partnerstva", eng: "Public-Private Partnerships" },
+    partnerships: { mne: "Javno-privatna partnerstva", eng: "Public-Private Partnerships" },
     procurement: { mne: "Javne nabavke", eng: "Public Procurement" },
     about: { mne: "O nama", eng: "About Us" },
     contact: { mne: "Kontakt", eng: "Contact" }
@@ -46,7 +46,7 @@ var translations = {
     whatTitle: { mne: "Šta radimo?", eng: "What do we do?" },
     whatText: { mne: "Fokusirani smo na tri glavna stuba našeg djelovanja:", eng: "We focus on three main pillars of our work:" },
     pillar1: { mne: "<strong>Koncesije:</strong> Pratimo proces dodjele i upravljanja koncesionim ugovorima kako bismo osigurali zaštitu javnog interesa i prirodnih resursa.", eng: "<strong>Concessions:</strong> We monitor the process of awarding and managing concession contracts to ensure the protection of public interest and natural resources." },
-    pillar2: { mne: "<strong>Privatno-javna partnerstva:</strong> Analiziramo modele saradnje između javnog i privatnog sektora, promovišući najbolje međunarodne prakse i odgovornost.", eng: "<strong>Public-Private Partnerships:</strong> We analyze models of cooperation between the public and private sectors, promoting best international practices and accountability." },
+    pillar2: { mne: "<strong>Javno-privatna partnerstva:</strong> Analiziramo modele saradnje između javnog i privatnog sektora, promovišući najbolje međunarodne prakse i odgovornost.", eng: "<strong>Public-Private Partnerships:</strong> We analyze models of cooperation between the public and private sectors, promoting best international practices and accountability." },
     pillar3: { mne: "<strong>Javne nabavke:</strong> Nadgledamo transparentnost i zakonitost trošenja budžetskih sredstava kroz procese nabavki roba, radova i usluga.", eng: "<strong>Public Procurement:</strong> We oversee the transparency and legality of budget spending through the procurement processes of goods, works and services." },
     valuesTitle: { mne: "Naše vrijednosti", eng: "Our Values" },
     valuesText: { mne: "U radu se vodimo principima integriteta, objektivnosti i profesionalizma. Vjerujemo u snagu argumenata zasnovanih na dokazima i otvoreni smo za saradnju sa svim akterima koji dijele našu viziju moderne i razvijene Crne Gore.", eng: "In our work, we are guided by the principles of integrity, objectivity and professionalism. We believe in the power of evidence-based arguments and are open to cooperation with all stakeholders who share our vision of a modern and developed Montenegro." }
@@ -67,7 +67,7 @@ var translations = {
     text: { mne: "Ova sekcija je posvećena praćenju i analizi koncesionih ugovora u Crnoj Gori.", eng: "This section is dedicated to monitoring and analyzing concession contracts in Montenegro." }
   },
   partnerstva: {
-    title: { mne: "Privatno-javna partnerstva", eng: "Public-Private Partnerships" },
+    title: { mne: "Javno-privatna partnerstva", eng: "Public-Private Partnerships" },
     text: { mne: "Ovdje možete pronaći informacije o modelima saradnje javnog i privatnog sektora.", eng: "Here you can find information about models of cooperation between the public and private sectors." }
   },
   nabavke: {
