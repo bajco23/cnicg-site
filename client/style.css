@@ -159,11 +159,11 @@ nav ul li > a {
     white-space: nowrap;
 }
 
-nav ul li:nth-child(1) > a { background: #dce3ec; color: #3d5068; }
-nav ul li:nth-child(2) > a { background: #e8dfd0; color: #6b5a3e; }
-nav ul li:nth-child(3) > a { background: #d4e4d8; color: #3e604a; }
-nav ul li:nth-child(4) > a { background: #e0d8e8; color: #5a4a6b; }
-nav ul li:nth-child(5) > a { background: #dde0e6; color: #4a4f5e; }
+nav ul li:nth-child(1) > a { background: #c9a84c; color: #fff; }
+nav ul li:nth-child(2) > a { background: #2c4a6e; color: #fff; }
+nav ul li:nth-child(3) > a { background: #c9a84c; color: #fff; }
+nav ul li:nth-child(4) > a { background: #2c4a6e; color: #fff; }
+nav ul li:nth-child(5) > a { background: #c9a84c; color: #fff; }
 
 nav ul li > a:hover {
     filter: brightness(0.93);
