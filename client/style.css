@@ -107,7 +107,7 @@ nav ul li .dropdown {
     top: 100%;
     left: 0;
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 4px;
     min-width: 200px;
     padding: 6px 0;
@@ -133,6 +133,11 @@ nav ul li .dropdown a {
     color: #333;
     text-decoration: none;
     transition: background 0.15s, color 0.15s;
+    border-bottom: 1px solid #333;
+}
+
+nav ul li .dropdown a:last-child {
+    border-bottom: none;
 }
 
 nav ul li .dropdown a:hover {
