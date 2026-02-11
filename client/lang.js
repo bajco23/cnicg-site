@@ -1,4 +1,7 @@
 var translations = {
+  header: {
+    tagline: { mne: "Transparentnost i odgovornost u upravljanju javnim resursima.", eng: "Transparency and accountability in public resource management." },
+  },
   nav: {
     home: { mne: "Početna", eng: "Home" },
     concessions: { mne: "Koncesije", eng: "Concessions" },
