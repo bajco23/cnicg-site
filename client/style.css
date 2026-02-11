@@ -386,7 +386,7 @@ main {
 .hero-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px;
     align-items: start;
 }
 
@@ -401,12 +401,36 @@ main {
 }
 
 .category {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    color: #777;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 10px;
-    display: block;
+    display: inline-block;
+    padding: 3px 10px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.category[data-lang-key="index.cat1"],
+.category[data-lang-key="index.cat4"] {
+    background: #e8f0fe;
+    color: #0047ab;
+}
+
+.category[data-lang-key="index.cat2"],
+.category[data-lang-key="index.cat5"] {
+    background: #fef3e0;
+    color: #b86e00;
+}
+
+.category[data-lang-key="index.cat3"] {
+    background: #e6f4ea;
+    color: #1a7f37;
+}
+
+.category[data-lang-key="index.cat6"] {
+    background: #f3e8fd;
+    color: #7c3aed;
 }
 
 h2, h3 {
@@ -424,16 +448,25 @@ h2, h3 {
 }
 
 .excerpt {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .read-more {
     color: #0047ab;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: bold;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.read-more:hover {
+    border-bottom-color: #0047ab;
 }
 
 /* Sidebar Specific */
@@ -444,6 +477,14 @@ h2, h3 {
 
 .news-item {
     margin-bottom: 40px;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 20px;
+}
+
+.news-item h3 {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
 }
 
 /* Cards Section */
