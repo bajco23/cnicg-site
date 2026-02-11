@@ -283,9 +283,6 @@ nav ul li .dropdown a:hover {
 .slide-content .category {
     margin-bottom: 6px;
     font-size: 0.68rem;
-    background: none;
-    padding: 0;
-    color: #c9a84c;
     font-weight: 700;
 }
 
@@ -429,24 +426,24 @@ main {
 
 .category[data-lang-key="index.cat1"],
 .category[data-lang-key="index.cat4"] {
-    background: #e8f0fe;
-    color: #0047ab;
+    background: #2c4a6e;
+    color: #fff;
 }
 
 .category[data-lang-key="index.cat2"],
 .category[data-lang-key="index.cat5"] {
-    background: #fef3e0;
-    color: #b86e00;
+    background: #c9a84c;
+    color: #fff;
 }
 
 .category[data-lang-key="index.cat3"] {
-    background: #e6f4ea;
-    color: #1a7f37;
+    background: #2c4a6e;
+    color: #fff;
 }
 
 .category[data-lang-key="index.cat6"] {
-    background: #f3e8fd;
-    color: #7c3aed;
+    background: #c9a84c;
+    color: #fff;
 }
 
 h2, h3 {
