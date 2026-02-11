@@ -145,16 +145,26 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a {
+nav ul li > a {
     color: #333;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 14px;
+    border-radius: 3px;
+    transition: all 0.2s;
 }
 
-nav ul li a:hover {
-    color: #0047ab;
+nav ul li:nth-child(1) > a { background: #eef2f7; color: #0047ab; }
+nav ul li:nth-child(2) > a { background: #fef3e0; color: #b86e00; }
+nav ul li:nth-child(3) > a { background: #e6f4ea; color: #1a7f37; }
+nav ul li:nth-child(4) > a { background: #f3e8fd; color: #7c3aed; }
+nav ul li:nth-child(5) > a { background: #e8f0fe; color: #0047ab; }
+
+nav ul li > a:hover {
+    filter: brightness(0.93);
 }
 
 /* Dropdown Menu */
