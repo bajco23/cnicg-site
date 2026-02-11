@@ -2,6 +2,8 @@ var translations = {
   nav: {
     home: { mne: "Početna", eng: "Home" },
     concessions: { mne: "Koncesije", eng: "Concessions" },
+    konc_regulativa_orig: { mne: "Regulativa", eng: "Regulations" },
+    konc_registar_orig: { mne: "Registar koncesija", eng: "Concession Registry" },
     konc_regulativa: { mne: "Zakonska regulativa", eng: "Legal Framework" },
     konc_registar: { mne: "Registar koncesija", eng: "Concession Registry" },
     konc_analize: { mne: "Analize i izvještaji", eng: "Analyses and Reports" },
