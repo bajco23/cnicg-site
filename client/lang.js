@@ -2,8 +2,11 @@ var translations = {
   nav: {
     home: { mne: "Početna", eng: "Home" },
     concessions: { mne: "Koncesije", eng: "Concessions" },
-    regulativa: { mne: "Regulativa", eng: "Regulations" },
-    registar: { mne: "Registar koncesija", eng: "Concession Registry" },
+    konc_regulativa: { mne: "Zakonska regulativa", eng: "Legal Framework" },
+    konc_registar: { mne: "Registar koncesija", eng: "Concession Registry" },
+    konc_analize: { mne: "Analize i izvještaji", eng: "Analyses and Reports" },
+    konc_transparentnost: { mne: "Transparentnost i dokumentacija", eng: "Transparency and Documentation" },
+    konc_faq: { mne: "FAQ/Objašnjenja", eng: "FAQ/Explanations" },
     partnerships: { mne: "Javno-privatna partnerstva", eng: "Public-Private Partnerships" },
     jpp_regulativa: { mne: "Zakonska regulativa", eng: "Legal Framework" },
     jpp_registar: { mne: "Registar JPP", eng: "PPP Registry" },
