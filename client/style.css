@@ -78,6 +78,12 @@ body {
     text-decoration: underline;
 }
 
+.search-row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px 0;
+}
+
 /* Navigation */
 nav {
     border-bottom: 1px solid #eee;
