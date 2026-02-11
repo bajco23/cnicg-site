@@ -133,7 +133,7 @@ nav ul li .dropdown a {
     color: #333;
     text-decoration: none;
     transition: background 0.15s, color 0.15s;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #ccc;
 }
 
 nav ul li .dropdown a:last-child {
