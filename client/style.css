@@ -477,17 +477,12 @@ button {
 .btn-download:hover {
     background: #444 !important;
 }
-.footer-transition {
-    height: 120px;
-    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f0 20%, #e8e8e0 40%, #3a3a35 70%, #222222 100%);
-    margin-top: 60px;
-}
-
 footer {
-    background-color: #222222;
-    color: #fff;
+    background-color: #f5f5f5;
+    color: #333;
     padding: 60px 50px;
-    margin-top: 0;
+    margin-top: 60px;
+    border-top: 3px solid #0047ab;
 }
 
 .footer-content {
@@ -500,10 +495,12 @@ footer {
 }
 
 .footer-section h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 25px;
+    color: #0047ab;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-links {
@@ -517,14 +514,14 @@ footer {
 }
 
 .footer-links a {
-    color: #a3b34c; /* Green color from screenshot */
+    color: #444;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    opacity: 0.8;
+    color: #0047ab;
 }
 
 .footer-logo-section {
@@ -552,29 +549,36 @@ footer {
 .social-icon {
     width: 40px;
     height: 40px;
-    border: 1px solid #444;
+    border: 1px solid #ccc;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #555;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .social-icon:hover {
-    background: #333;
+    background: #0047ab;
+    border-color: #0047ab;
+    color: #fff;
 }
 
 .footer-contact p {
     margin-bottom: 12px;
     font-size: 0.95rem;
-    color: #eee;
+    color: #555;
 }
 
 .footer-contact a {
-    color: #a3b34c;
+    color: #0047ab;
     text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.footer-contact a:hover {
+    opacity: 0.7;
 }
 
 @media (max-width: 900px) {
