@@ -2,6 +2,8 @@ var translations = {
   nav: {
     home: { mne: "Početna", eng: "Home" },
     concessions: { mne: "Koncesije", eng: "Concessions" },
+    regulativa: { mne: "Regulativa", eng: "Regulations" },
+    registar: { mne: "Registar koncesija", eng: "Concession Registry" },
     partnerships: { mne: "Privatno-javna partnerstva", eng: "Public-Private Partnerships" },
     procurement: { mne: "Javne nabavke", eng: "Public Procurement" },
     about: { mne: "O nama", eng: "About Us" },
