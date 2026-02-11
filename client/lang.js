@@ -5,6 +5,11 @@ var translations = {
     regulativa: { mne: "Regulativa", eng: "Regulations" },
     registar: { mne: "Registar koncesija", eng: "Concession Registry" },
     partnerships: { mne: "Javno-privatna partnerstva", eng: "Public-Private Partnerships" },
+    jpp_regulativa: { mne: "Zakonska regulativa", eng: "Legal Framework" },
+    jpp_registar: { mne: "Registar JPP", eng: "PPP Registry" },
+    jpp_analize: { mne: "Analize i izvještaji", eng: "Analyses and Reports" },
+    jpp_transparentnost: { mne: "Transparentnost i dokumentacija", eng: "Transparency and Documentation" },
+    jpp_faq: { mne: "FAQ/Objašnjenja", eng: "FAQ/Explanations" },
     procurement: { mne: "Javne nabavke", eng: "Public Procurement" },
     about: { mne: "O nama", eng: "About Us" },
     contact: { mne: "Kontakt", eng: "Contact" }
