@@ -171,4 +171,40 @@ function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", function() {
   var saved = localStorage.getItem("cni-lang") || "mne";
   setLanguage(saved);
+
+  var navItems = document.querySelectorAll("nav ul > li");
+  navItems.forEach(function(li) {
+    var dropdown = li.querySelector(".dropdown");
+    if (dropdown) {
+      li.addEventListener("click", function(e) {
+        if (window.innerWidth <= 860) {
+          var link = li.querySelector(":scope > a");
+          if (e.target === link || link.contains(e.target)) {
+            e.preventDefault();
+            li.classList.toggle("dropdown-open");
+          }
+        }
+      });
+    }
+  });
+
+  document.addEventListener("click", function(e) {
+    var nav = document.querySelector("nav ul");
+    var hamburger = document.querySelector(".hamburger");
+    if (nav && nav.classList.contains("mobile-open")) {
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove("mobile-open");
+        hamburger.classList.remove("active");
+      }
+    }
+  });
 });
+
+function toggleMobileMenu() {
+  var nav = document.querySelector("nav ul");
+  var hamburger = document.querySelector(".hamburger");
+  if (nav) {
+    nav.classList.toggle("mobile-open");
+    hamburger.classList.toggle("active");
+  }
+}
