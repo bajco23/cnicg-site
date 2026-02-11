@@ -47,7 +47,8 @@ body {
 }
 
 .tagline {
-    margin: 4px 0 0 0;
+    margin: -2px 0 0 0;
+    padding-left: 18px;
     font-size: 0.85rem;
     color: #555;
     font-style: italic;
