@@ -132,11 +132,11 @@ function setLanguage(lang) {
   var btnEng = document.getElementById("btn-eng");
   if (btnMne && btnEng) {
     if (lang === "mne") {
-      btnMne.style.fontWeight = "bold";
-      btnEng.style.fontWeight = "normal";
+      btnMne.classList.add("active");
+      btnEng.classList.remove("active");
     } else {
-      btnMne.style.fontWeight = "normal";
-      btnEng.style.fontWeight = "bold";
+      btnMne.classList.remove("active");
+      btnEng.classList.add("active");
     }
   }
   var elements = document.querySelectorAll("[data-lang-key]");

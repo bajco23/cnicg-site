@@ -21,9 +21,15 @@
             <span class="search-text">Search</span>
         </div>
         <div class="lang-switch">
-            <span id="btn-mne" onclick="setLanguage('mne')" style="cursor:pointer; font-weight:bold;">MNE</span>
-            <span>|</span>
-            <span id="btn-eng" onclick="setLanguage('eng')" style="cursor:pointer;">ENG</span>
+            <div id="btn-mne" class="lang-option active" onclick="setLanguage('mne')">
+                <img src="https://flagcdn.com/w40/me.png" alt="Crnogorski">
+                <span>MNE</span>
+            </div>
+            <span class="lang-divider">|</span>
+            <div id="btn-eng" class="lang-option" onclick="setLanguage('eng')">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>ENG</span>
+            </div>
         </div>
         </div>
     </div>

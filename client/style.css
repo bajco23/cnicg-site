@@ -70,21 +70,48 @@ body {
 
 .lang-switch {
     margin-left: 0;
-    margin-top: 6px;
-    font-size: 0.85rem;
-    color: #333;
+    margin-top: 8px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
-.lang-switch span {
+.lang-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
-    transition: font-weight 0.2s;
+    gap: 4px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
 }
 
-.lang-switch span:hover {
-    text-decoration: underline;
+.lang-option.active {
+    opacity: 1;
+}
+
+.lang-option:hover {
+    opacity: 1;
+}
+
+.lang-option img {
+    width: 40px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.lang-option span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.lang-divider {
+    font-size: 1.2rem;
+    color: #ccc;
+    align-self: center;
+    margin-top: -8px;
 }
 
 .header-container {
