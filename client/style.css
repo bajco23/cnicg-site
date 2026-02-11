@@ -78,10 +78,15 @@ body {
     text-decoration: underline;
 }
 
+.header-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .search-row {
     display: flex;
     justify-content: flex-start;
-    padding: 8px 0;
+    padding: 10px 0;
 }
 
 /* Navigation */
@@ -96,7 +101,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
 }
 
