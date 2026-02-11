@@ -21,7 +21,8 @@ var translations = {
     procurement: { mne: "Javne nabavke", eng: "Public Procurement" },
     about: { mne: "O nama", eng: "About Us" },
     contact: { mne: "Kontakt", eng: "Contact" },
-    finansijski: { mne: "Finansijski iskaz", eng: "Financial Statement" }
+    finansijski: { mne: "Finansijski iskaz", eng: "Financial Statement" },
+    javne_politike: { mne: "Javne politike", eng: "Public Policies" }
   },
   footer: {
     links: { mne: "Linkovi", eng: "Links" },
@@ -87,6 +88,10 @@ var translations = {
   nabavke: {
     title: { mne: "Javne nabavke", eng: "Public Procurement" },
     text: { mne: "Monitoring i analiza procesa javnih nabavki u cilju povećanja transparentnosti.", eng: "Monitoring and analysis of public procurement processes to increase transparency." }
+  },
+  javne_politike: {
+    title: { mne: "Javne politike", eng: "Public Policies" },
+    text: { mne: "Ova sekcija je posvećena analizi i praćenju javnih politika u Crnoj Gori, sa fokusom na transparentnost, odgovornost i učešće građana u procesu donošenja odluka.", eng: "This section is dedicated to the analysis and monitoring of public policies in Montenegro, with a focus on transparency, accountability and citizen participation in the decision-making process." }
   },
   izvjestaj: {
     cat: { mne: "JAVNE NABAVKE, JPP, STRATEGIJA", eng: "PUBLIC PROCUREMENT, PPP, STRATEGY" },
