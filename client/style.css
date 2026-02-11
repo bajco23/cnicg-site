@@ -27,7 +27,6 @@ body {
     cursor: pointer;
     transition: border-color 0.2s;
     width: 250px;
-    margin-left: auto;
 }
 
 .search-container:hover {
@@ -62,7 +61,7 @@ body {
 }
 
 .lang-switch {
-    margin-left: 20px;
+    margin-left: auto;
     font-size: 0.85rem;
     color: #333;
     display: flex;
