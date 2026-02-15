@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import type { Server } from "http";
 import path from "path";
+import express from "express";
 import { fileURLToPath } from "url";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
@@ -30,43 +31,41 @@ export async function registerRoutes(
     }
   });
 
-  // Serve static HTML files explicitly
   const clientPath = path.resolve(__dirname, "..", "client");
-  
+
+  app.use("/lang.js", (req, res) => {
+    res.type("application/javascript");
+    res.sendFile(path.join(clientPath, "lang.js"));
+  });
+
+  app.use("/style.css", (req, res) => {
+    res.type("text/css");
+    res.sendFile(path.join(clientPath, "style.css"));
+  });
+
+  app.use("/images", express.static(path.join(clientPath, "public", "images")));
+  app.use("/docs", express.static(path.join(clientPath, "public", "docs")));
+
+  const htmlPages = [
+    "index.html",
+    "about.html",
+    "contact.html",
+    "koncesije.html",
+    "partnerstva.html",
+    "nabavke.html",
+    "javne-politike.html",
+    "izvjestaj-detaljno.html",
+    "vijest-koncesije-rasprava.html",
+  ];
+
   app.get("/", (req, res) => {
     res.sendFile(path.join(clientPath, "index.html"));
   });
 
-  app.get("/index.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "index.html"));
-  });
-
-  app.get("/about.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "about.html"));
-  });
-
-  app.get("/contact.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "contact.html"));
-  });
-
-  app.get("/koncesije.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "koncesije.html"));
-  });
-
-  app.get("/partnerstva.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "partnerstva.html"));
-  });
-
-  app.get("/nabavke.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "nabavke.html"));
-  });
-
-  app.get("/izvjestaj-detaljno.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "izvjestaj-detaljno.html"));
-  });
-
-  app.get("/vijest-koncesije-rasprava.html", (req, res) => {
-    res.sendFile(path.join(clientPath, "vijest-koncesije-rasprava.html"));
+  htmlPages.forEach((page) => {
+    app.get("/" + page, (req, res) => {
+      res.sendFile(path.join(clientPath, page));
+    });
   });
 
   return httpServer;

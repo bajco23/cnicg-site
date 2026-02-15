@@ -79,7 +79,12 @@ var translations = {
     nameLabel: { mne: "Ime i prezime:", eng: "Full name:" },
     emailLabel: { mne: "Email adresa:", eng: "Email address:" },
     messageLabel: { mne: "Poruka:", eng: "Message:" },
-    sendButton: { mne: "Pošalji poruku", eng: "Send message" }
+    sendButton: { mne: "Pošalji poruku", eng: "Send message" },
+    sending: { mne: "Slanje...", eng: "Sending..." },
+    success: { mne: "Poruka je uspješno poslata! Hvala vam.", eng: "Message sent successfully! Thank you." },
+    error: { mne: "Greška pri slanju poruke. Pokušajte ponovo.", eng: "Error sending message. Please try again." },
+    errorName: { mne: "Ime mora imati najmanje 2 karaktera.", eng: "Name must be at least 2 characters." },
+    errorMessage: { mne: "Poruka mora imati najmanje 10 karaktera.", eng: "Message must be at least 10 characters." }
   },
   koncesije: {
     title: { mne: "Koncesije", eng: "Concessions" },
@@ -363,3 +368,55 @@ document.addEventListener("click", function(e) {
     wrapper.classList.remove("active");
   }
 });
+
+function submitContactForm(e) {
+  e.preventDefault();
+  var lang = getCurrentLang();
+  var nameVal = document.getElementById("name").value.trim();
+  var emailVal = document.getElementById("email").value.trim();
+  var messageVal = document.getElementById("message").value.trim();
+  var statusEl = document.getElementById("formStatus");
+  var submitBtn = e.target.querySelector('button[type="submit"]');
+
+  if (nameVal.length < 2) {
+    statusEl.textContent = translations.contact.errorName[lang];
+    statusEl.className = "form-status error";
+    statusEl.style.display = "block";
+    return;
+  }
+  if (messageVal.length < 10) {
+    statusEl.textContent = translations.contact.errorMessage[lang];
+    statusEl.className = "form-status error";
+    statusEl.style.display = "block";
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = translations.contact.sending[lang];
+  statusEl.style.display = "none";
+
+  fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: nameVal, email: emailVal, message: messageVal })
+  })
+  .then(function(res) {
+    if (!res.ok) throw new Error("Server error");
+    return res.json();
+  })
+  .then(function() {
+    statusEl.textContent = translations.contact.success[lang];
+    statusEl.className = "form-status success";
+    statusEl.style.display = "block";
+    e.target.reset();
+  })
+  .catch(function() {
+    statusEl.textContent = translations.contact.error[lang];
+    statusEl.className = "form-status error";
+    statusEl.style.display = "block";
+  })
+  .finally(function() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = translations.contact.sendButton[lang];
+  });
+}
