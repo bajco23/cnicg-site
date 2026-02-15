@@ -17,8 +17,13 @@
             <p class="tagline" data-lang-key="header.tagline">Transparentnost i odgovornost u upravljanju javnim resursima.</p>
         </div>
         <div class="search-lang-group">
-        <div class="search-container">
-            <span class="search-text">Search</span>
+        <div class="search-wrapper">
+            <div class="search-container" onclick="openSearch()">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Pretraži..." data-lang-key-placeholder="search.placeholder" oninput="handleSearch(this.value)" onfocus="openSearch()">
+                <span class="search-close" onclick="closeSearch(event)">&times;</span>
+            </div>
+            <div class="search-results" id="searchResults"></div>
         </div>
         <div class="lang-switch">
             <div id="btn-mne" class="lang-option active" onclick="setLanguage('mne')">

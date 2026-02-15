@@ -24,6 +24,10 @@ var translations = {
     finansijski: { mne: "Finansijski iskaz", eng: "Financial Statement" },
     javne_politike: { mne: "Javne politike", eng: "Public Policies" }
   },
+  search: {
+    placeholder: { mne: "Pretraži...", eng: "Search..." },
+    noResults: { mne: "Nema rezultata", eng: "No results found" }
+  },
   footer: {
     links: { mne: "Linkovi", eng: "Links" },
     contact: { mne: "Kontakt", eng: "Contact" },
@@ -166,6 +170,17 @@ function setLanguage(lang) {
       }
     }
   });
+
+  var placeholderEls = document.querySelectorAll("[data-lang-key-placeholder]");
+  placeholderEls.forEach(function(el) {
+    var key = el.getAttribute("data-lang-key-placeholder");
+    var parts = key.split(".");
+    var value = translations;
+    for (var i = 0; i < parts.length; i++) {
+      if (value[parts[i]]) { value = value[parts[i]]; } else { return; }
+    }
+    if (value[lang]) { el.placeholder = value[lang]; }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -208,3 +223,143 @@ function toggleMobileMenu() {
     hamburger.classList.toggle("active");
   }
 }
+
+var searchIndex = [
+  {
+    category: { mne: "JAVNE NABAVKE", eng: "PUBLIC PROCUREMENT" },
+    title: { mne: "Završni izvještaj o Strategiji javnih nabavki 2021–2025", eng: "Final Report on the Public Procurement Strategy 2021–2025" },
+    url: "izvjestaj-detaljno.html"
+  },
+  {
+    category: { mne: "KONCESIJE", eng: "CONCESSIONS" },
+    title: { mne: "Zahtjev za produženje javne rasprave o planu koncesija za 2026.", eng: "Request for Extension of Public Debate on the 2026 Concession Plan" },
+    url: "vijest-koncesije-rasprava.html"
+  },
+  {
+    category: { mne: "EVROPSKI POSLOVI", eng: "EUROPEAN AFFAIRS" },
+    title: { mne: "Saradnja sa Ministarstvom evropskih poslova na Reformskoj agendi", eng: "Cooperation with the Ministry of European Affairs on the Reform Agenda" },
+    url: "index.html"
+  },
+  {
+    category: { mne: "JAVNE NABAVKE", eng: "PUBLIC PROCUREMENT" },
+    title: { mne: "Analiza transparentnosti procesa javnih nabavki u 2025. godini", eng: "Analysis of Public Procurement Transparency in 2025" },
+    url: "index.html"
+  },
+  {
+    category: { mne: "KONCESIJE", eng: "CONCESSIONS" },
+    title: { mne: "Novi izvještaj o upravljanju koncesionim ugovorima u sektoru voda", eng: "New Report on Management of Concession Contracts in the Water Sector" },
+    url: "index.html"
+  },
+  {
+    category: { mne: "MLADI I INOVACIJE", eng: "YOUTH AND INNOVATION" },
+    title: { mne: 'Završen mentorski program "Nove inicijative za novu generaciju"', eng: '"New Initiatives for a New Generation" Mentoring Program Completed' },
+    url: "index.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "O nama", eng: "About Us" },
+    url: "about.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "Kontakt", eng: "Contact" },
+    url: "contact.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "Koncesije", eng: "Concessions" },
+    url: "koncesije.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "Javno-privatna partnerstva", eng: "Public-Private Partnerships" },
+    url: "partnerstva.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "Javne nabavke", eng: "Public Procurement" },
+    url: "nabavke.html"
+  },
+  {
+    category: { mne: "STRANICA", eng: "PAGE" },
+    title: { mne: "Javne politike", eng: "Public Policies" },
+    url: "javne-politike.html"
+  }
+];
+
+function getCurrentLang() {
+  return localStorage.getItem("cni-lang") || "mne";
+}
+
+function openSearch() {
+  var wrapper = document.querySelector(".search-wrapper");
+  if (wrapper) wrapper.classList.add("active");
+}
+
+function closeSearch(e) {
+  if (e) { e.stopPropagation(); e.preventDefault(); }
+  var wrapper = document.querySelector(".search-wrapper");
+  var input = document.querySelector(".search-input");
+  var results = document.getElementById("searchResults");
+  if (wrapper) wrapper.classList.remove("active");
+  if (input) input.value = "";
+  if (results) { results.innerHTML = ""; results.classList.remove("open"); }
+}
+
+function highlightMatch(text, query) {
+  if (!query) return text;
+  var escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  var regex = new RegExp("(" + escaped + ")", "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+}
+
+function handleSearch(query) {
+  var results = document.getElementById("searchResults");
+  var wrapper = document.querySelector(".search-wrapper");
+  if (!results) return;
+
+  query = query.trim();
+  if (query.length < 2) {
+    results.innerHTML = "";
+    results.classList.remove("open");
+    return;
+  }
+
+  var lang = getCurrentLang();
+  var lowerQuery = query.toLowerCase();
+  var matches = searchIndex.filter(function(item) {
+    var title = item.title[lang] || item.title.mne;
+    var cat = item.category[lang] || item.category.mne;
+    return title.toLowerCase().indexOf(lowerQuery) !== -1 || cat.toLowerCase().indexOf(lowerQuery) !== -1;
+  });
+
+  if (matches.length === 0) {
+    var noText = lang === "eng" ? "No results found" : "Nema rezultata";
+    results.innerHTML = '<div class="search-no-results">' + noText + '</div>';
+    results.classList.add("open");
+    return;
+  }
+
+  var html = "";
+  matches.forEach(function(item) {
+    var title = item.title[lang] || item.title.mne;
+    var cat = item.category[lang] || item.category.mne;
+    html += '<a href="' + item.url + '" class="search-result-item">';
+    html += '<div class="search-result-cat">' + cat + '</div>';
+    html += '<div class="search-result-title">' + highlightMatch(title, query) + '</div>';
+    html += '</a>';
+  });
+
+  results.innerHTML = html;
+  results.classList.add("open");
+  if (wrapper) wrapper.classList.add("active");
+}
+
+document.addEventListener("click", function(e) {
+  var wrapper = document.querySelector(".search-wrapper");
+  if (wrapper && !wrapper.contains(e.target)) {
+    var results = document.getElementById("searchResults");
+    if (results) results.classList.remove("open");
+    wrapper.classList.remove("active");
+  }
+});
