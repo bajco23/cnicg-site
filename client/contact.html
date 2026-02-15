@@ -88,7 +88,8 @@
             
             <p style="text-align: center; color: #555; margin-bottom: 30px;" data-lang-key="contact.formIntro">Ukoliko imate pitanja ili želite da sarađujete sa nama, pošaljite nam poruku putem forme ispod.</p>
             
-            <form id="contactForm" onsubmit="submitContactForm(event)">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" onsubmit="submitContactForm(event)">
+                <input type="hidden" name="form-name" value="contact">
                 <div class="form-group">
                     <label for="name" data-lang-key="contact.nameLabel">Ime i prezime:</label>
                     <input type="text" id="name" name="name" required data-testid="input-name">

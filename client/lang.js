@@ -372,11 +372,12 @@ document.addEventListener("click", function(e) {
 function submitContactForm(e) {
   e.preventDefault();
   var lang = getCurrentLang();
+  var form = e.target;
   var nameVal = document.getElementById("name").value.trim();
   var emailVal = document.getElementById("email").value.trim();
   var messageVal = document.getElementById("message").value.trim();
   var statusEl = document.getElementById("formStatus");
-  var submitBtn = e.target.querySelector('button[type="submit"]');
+  var submitBtn = form.querySelector('button[type="submit"]');
 
   if (nameVal.length < 2) {
     statusEl.textContent = translations.contact.errorName[lang];
@@ -395,6 +396,8 @@ function submitContactForm(e) {
   submitBtn.textContent = translations.contact.sending[lang];
   statusEl.style.display = "none";
 
+  var formData = new URLSearchParams(new FormData(form)).toString();
+
   fetch("/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -408,7 +411,23 @@ function submitContactForm(e) {
     statusEl.textContent = translations.contact.success[lang];
     statusEl.className = "form-status success";
     statusEl.style.display = "block";
-    e.target.reset();
+    form.reset();
+  })
+  .catch(function() {
+    return fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: "form-name=contact&" + formData
+    }).then(function(res) {
+      if (res.ok) {
+        statusEl.textContent = translations.contact.success[lang];
+        statusEl.className = "form-status success";
+        statusEl.style.display = "block";
+        form.reset();
+      } else {
+        throw new Error("Netlify form error");
+      }
+    });
   })
   .catch(function() {
     statusEl.textContent = translations.contact.error[lang];
